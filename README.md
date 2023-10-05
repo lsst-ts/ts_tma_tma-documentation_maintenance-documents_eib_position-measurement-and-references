@@ -133,8 +133,16 @@ When a head from azimuth axis is changed or relocated this procedure should be f
 
 For each axis there is a setting that allow to correct the absolute position of the telescope. This setting are shown in any instance of ENCODER SETTINGS, but there is only one setting for all heads. So, changing the value in one of the instances will change for all "instances" (this setting belongs to subsystem itself, so to all instances, due to this particularity the settings that belongs to the subsystem are shown in all instances in HMI)
 
-For azimuth axis, the setting is called "Azimuth Telescope Offset".
+Steps for Azimuth:
 
+- Power Off both axis (AZ and EL)
+- Make sure you are logged in a user with `Maintenance` privileges
+- Go to the settings window for the Encoder: `ENCODERSYSTEM SETTINGS`
+- Modify the value of the setting *Azimuth Telescope Offset*, note that the value is subtracted from the calculated
+  position, so for virtually moving the zero to positive, negative values must be used.
+- **Reboot the TMA-PXI**: this must be done only for azimuth but is **crucial**. If TMA PXI is not rebooted the
+  ACW won't be centered with azimuth and the system can be damaged.
+- Power on the azimuth axis and make a reference, the new 0 value should be at the desired position.
 
 > **DANGER**
 >
@@ -143,9 +151,28 @@ For azimuth axis, the setting is called "Azimuth Telescope Offset".
 > This applies to azimuth axis and to azimuth cable wrap. If the TMA-PXI is not rebooted damages in the Azimuth cable wrap could happen.
 >
 
-For elevation axis, the setting si called "Elevation Telescope Offset".
+Steps for Elevation:
+
+- Power Off both axis (AZ and EL)
+- Make sure you are logged in a user with `Maintenance` privileges
+- Go to the settings window for the Encoder: `ENCODERSYSTEM SETTINGS`
+- Modify the value of the setting *Elevation Telescope Offset*, note that the value is subtracted from the calculated
+  position, so for virtually moving the zero to positive, negative values must be used.
+- Power on the elevation axis and make a reference, the new 0 value should be at the desired position.
 
 ![Telescope offset settings](Figures/TelescopeOffsets.png)
+
+Example with values:
+
+- Here there is an example with screenshots for the following changes
+- *Azimuth Telescope Offset*: 10 deg
+- *Elevation Telescope Offset*: -5 deg
+
+![Azimuth offset 10 deg](Figures/AzimuthOffsetOf10Deg.png)
+
+![Elevation offset -5 deg](Figures/ElevationOffsetOf5Deg.png)
+
+![Encoder Settings page](Figures/SettingsForEncoderOffsetAzEl.png)
 
 ### Azimuth Cable Wrap
 
