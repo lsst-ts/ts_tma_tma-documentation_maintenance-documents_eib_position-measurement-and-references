@@ -28,7 +28,7 @@ Lastly, the procedure to convert this value to Telescope absolute value is used.
 
 ## Encoder Head data
 
-As shown in the [EIB documentation](https://gitlab.tekniker.es/publico/3151-lsst/documentation/pxicontroller_documentation/-/tree/master/06%20Subsystem%20EIB), the encoder is absolute after performing a reference procedure.
+As shown in the [EIB documentation](https://github.com/lsst-ts/ts_tma_tma-documentation_pxi-controller_documentation/tree/master/06%20Subsystem%20EIB), the encoder is absolute after performing a reference procedure.
 
 At the referenced document is shown that each encoder head sends its relative position and when performing the reference procedure a reference value is sent. This value is subtracted to the relative position to get the absolute position of the head in the encoder tape. In this sense, each head sends the head relative position and the reference data to convert this position to the absolute position of the head in the tape the head is reading to.  So that, this absolute position is the absolute position of each head and each head has its own absolute position, since they are located in different positions along the tape.
 
