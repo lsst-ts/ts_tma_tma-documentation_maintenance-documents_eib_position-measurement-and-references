@@ -38,7 +38,7 @@ The axis need to have the same position value in all the heads (or at least with
 
 The head reference offset calculation depends on the axis. For azimuth axis, the four heads reads in the same tape, but in elevation axis there are two heads in the X+ cradle and two heads in the X- cradle. This make that the procedure is different for both axis. In next sections the procedure for each axis is explained.
 
-Tekniker developed a tool to calculate the offset. The Tool is named Head Reference Offset Calculation Tool and is located at /usr/local/TMA_HeadReferenceOffsetCalculationTool.
+Tekniker developed a tool to calculate the offset. The Tool is named Head Reference Offset Calculation Tool and is located at `/usr/local/TMA_HeadReferenceOffsetCalculationTool`.
 
 Running the application the window shown in next figure appears. This windows allow to select the axis to work with or exit the application.
 
